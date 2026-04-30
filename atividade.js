@@ -2,6 +2,7 @@
 //   ATIVIDADE 10 – Estruturas de Controle (Repetição - While)
 // ============================================================
 
+let readline = require("readline-sync");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – While simples
@@ -12,16 +13,16 @@
 
 // → Seu código aqui:
 
-let n = 1   
+// let n = 1   
 
-while (n <= 7) {
-    console.log(`${n}`)
-    n++;
-};
-console.log("Fim da contagem!");
+// while (n <= 7) {
+//     console.log(`${n}`)
+//     n++;
+// };
+// console.log("Fim da contagem!");
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -33,14 +34,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let regressiva = 10;
+// let regressiva = 10;
 
-while (regressiva <= 10) {
-    
-}
+// while (regressiva > 0) {
+//     console.log(`Contagem: ${regressiva}`)
+//     regressiva--;
+// }
 
+// console.log("Lançamento ON!")
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -52,6 +55,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let numero = readline.questionInt("Digite um numero de 1 a 5: ")
+
+// while (numero < 1 || numero > 5){
+//     numero = readline.questionInt("Numero invalido. Digite um numero de 1 a 5: ")
+// };
+
+// console.log(`Voce escolheu: ${numero}`)
 
 console.log("_______________________________");
 
@@ -65,6 +75,23 @@ console.log("_______________________________");
 // d) Ao final, exiba a soma, a quantidade de numeros digitados e quais foram os números digitados.
 
 // → Seu código aqui:
+
+let numero = null;
+let soma = 0;
+let contador = 0;
+let numerosDigitados = []
+
+while (numero !== 0){
+    numero = readline.questionInt("Digite um numero: ");
+    soma += numero
+    contador++
+    numerosDigitados.push(numero);
+};
+
+console.log(`Soma: ${soma}`);
+console.log(`Contador: ${contador}`)
+console.log(`Quantidade de numeros: ${numerosDigitados.length}`)
+
 
 
 console.log("_______________________________");
